@@ -1,3 +1,27 @@
+#####2018-5-31
+LKL 要求 ldd 的版本至少在 2.14 ，后台需开启TUN/TAP。目前我测试下来，如果不想折腾建议直接安装 CentOS7 ， Debian8 和 Ubuntu16
+安装包只使用 64bit 的系统。
+默认的端口转发只转发了 9000-9999 的端口，如果你不想费心修改，请把 ssr 等应用的端口设在这个范围
+只适用 openvz ，
+安装 LKL 一键包命令
+wget --no-check-certificate https://github.com/eatdao/uml/raw/master/lkl/install.sh && bash install.sh
+ 
+如何判断是否安装成功
+ping 10.0.0.2
+
+如果 10.0.0.2 能 ping 通说明成功， ping 不通说明失败
+
+如果修改转发端口
+修改 /root/lkl/run.sh ，查找 9000-9999 ，改成你想要的端口段
+修改 /root/lkl/haproxy.cfg 查找 9000-9999 ，改成你想要的端口段
+重启 vps
+
+
+
+
+
+
+
 ## 3月16日更新的内容：
 1. 随机启动的问题在 [@Jacky Bao](https://plus.google.com/u/0/108855478531549571757/posts/DabLxwHAwGH) 的分享下顺利解决
 2. 进入uml的方式更简单，只要执行screen -x或者bash run.sh status即可
