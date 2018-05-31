@@ -3,7 +3,9 @@ LKL 要求 ldd 的版本至少在 2.14 ，后台需开启TUN/TAP。目前我测�
 安装包只使用 64bit 的系统。
 默认的端口转发只转发了 9000-9999 的端口，如果你不想费心修改，请把 ssr 等应用的端口设在这个范围
 只适用 openvz ，
+
 安装 LKL 一键包命令
+
 wget --no-check-certificate https://github.com/eatdao/uml/raw/master/lkl/install.sh && bash install.sh
  
 如何判断是否安装成功
