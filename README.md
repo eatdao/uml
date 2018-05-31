@@ -8,8 +8,8 @@ wget --no-check-certificate https://github.com/eatdao/uml/raw/master/lkl/install
  
 如何判断是否安装成功
 ping 10.0.0.2
-
 如果 10.0.0.2 能 ping 通说明成功， ping 不通说明失败
+
 
 如果修改转发端口
 修改 /root/lkl/run.sh ，查找 9000-9999 ，改成你想要的端口段
